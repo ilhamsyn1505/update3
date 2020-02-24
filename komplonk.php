@@ -27,7 +27,8 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
         echo "n";
-        $pilihan = trim(fgets(STDIN));
+        $
+        $pilihan = (fgets(STDIN));
    
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
