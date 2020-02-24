@@ -26,8 +26,9 @@ function change(){
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
+        echo "n";
         $pilihan = trim(fgets(STDIN));
-        $pilihan = request(""n"");
+   
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
         echo "\n".color("yellow","!] Claim voc GOFOOD-A");
