@@ -27,9 +27,7 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
         echo "n";
-        
         $pilihan = (fgets(STDIN));
-   
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
         echo "\n".color("yellow","!] Claim voc GOFOOD-A");
@@ -103,7 +101,6 @@ function change(){
          setpin:
          echo "\n".color("nevy","?] Mau set pin?: y/n ");
          echo "y";
-         
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
