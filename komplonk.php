@@ -10,7 +10,6 @@ function change(){
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
         echo color("nevy","(•) Nomor : ");
-        echo "6283";
         $no = trim(fgets(STDIN));
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
@@ -28,7 +27,7 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
         echo "n";
-        
+        $
         $pilihan = (fgets(STDIN));
    
         if($pilihan == "y" || $pilihan == "Y"){
@@ -104,7 +103,7 @@ function change(){
          setpin:
          echo "\n".color("nevy","?] Mau set pin?: y/n ");
          echo "y";
-         
+         $
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
