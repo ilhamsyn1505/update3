@@ -25,7 +25,8 @@ function change(){
         echo color("green","+] Berhasil mendaftar");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
-        echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");"n";"\n";
+        echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
+        echo "\n"."n"."\n";
         $pilihan = (fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
@@ -98,7 +99,8 @@ function change(){
         $expired3 = getStr1('"expiry_date":"','"',$cekvoucher,'3');
         $expired4 = getStr1('"expiry_date":"','"',$cekvoucher,'4');
          setpin:
-         echo "\n".color("nevy","?] Mau set pin?: y/n ");"y";"\n";
+         echo "\n".color("nevy","?] Mau set pin?: y/n ");
+         echo "\n"."n"."\n";
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
