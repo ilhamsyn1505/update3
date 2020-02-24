@@ -10,7 +10,7 @@ function change(){
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
         echo color("nevy","(•) Nomor : ");
-        echo "6283"
+        echo "6283";
         $no = trim(fgets(STDIN));
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
