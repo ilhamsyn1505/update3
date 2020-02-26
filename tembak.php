@@ -157,7 +157,6 @@ echo " ===========================\n";
          echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan input kembali\n");
          goto otp;
-        	];
                 $header = [
                 "X-Requested-With: XMLHttpRequest",
                 "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36" 
