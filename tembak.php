@@ -55,33 +55,47 @@ echo " ===========================\n";
         echo color("green","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
         echo color("red","\n===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] Claim voc GOFOOD021120A");
+        echo "\n".color("yellow","!] Claim voc GOFOOD A");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD021120A"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$message);
-        echo "\n".color("yellow","!] Claim voc GOFOOD021120B");
+        echo "\n".color("yellow","!] Claim voc GOFOOD B");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
         }
         sleep(3);
-        $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD021120B"}');
+        $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620B"}');
         $messageboba10 = fetch_value($boba10,'"message":"','"');
         if(strpos($boba10, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messageboba10);
         goto goride;
         }else{
-        echo "\n".color("green","+] Message: ".$messageboba10);
+        echo "\n".color("red","-] Message: ".$messageboba10);
+        echo "\n".color("yellow","!] Claim voc COBAGOCAR");
+        echo "\n".color("yellow","!] Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("yellow",".");
+        sleep(1);
+        }
+        sleep(3);
+        $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOCAR"}');
+        $messageboba19 = fetch_value($boba19,'"message":"','"');
+        if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
+        echo "\n".color("green","+] Message: ".$messageboba19);
+        goto goride;
+        }else{
+        echo "\n".color("green","+] Message: ".$messageboba19);
         goride:
         echo "\n".color("yellow","!] Claim voc COBAGORIDE");
         echo "\n".color("yellow","!] Please wait");
@@ -93,14 +107,14 @@ echo " ===========================\n";
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDE"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
-        echo "\n".color("yellow","!] Claim voc COBAGOCAR");
+        echo "\n".color("yellow","!] Claim voc GOPAYDIXXI5");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
         }
         sleep(3);
-        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOCAR"}');
+        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOPAYDIXXI5"}');
         $message2 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message2);
         sleep(3);
@@ -129,7 +143,7 @@ echo " ===========================\n";
         $expired5 = getStr1('"expiry_date":"','"',$cekvoucher,'5');
         $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
         $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
-        setpin:
+         setpin:
          echo "\n".color("nevy","?] Mau set pin?: y/n ");
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
@@ -157,39 +171,18 @@ echo " ===========================\n";
          echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan input kembali\n");
          goto otp;
-                $header = [
-                "X-Requested-With: XMLHttpRequest",
-                "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36" 
-                        ];
-                                        $ch = curl_init();
-                                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                                        curl_setopt($ch, CURLOPT_URL, $url);
-                                        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-                                        curl_setopt($ch, CURLOPT_POSTFIELDS, $post );   
-                                        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                                        $datas = curl_exec($ch);
-                                        $error = curl_error($ch);
-                                        $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                                        curl_close($ch);
-                                        $debug['text'] = $pesan;
-                                        $debug['respon'] = json_decode($datas, true);
-        
-         
          }
-         }
-        }
          }else{
-            echo color("red","-] Otp yang anda input salah");
-            echo"\n==================================\n\n";
-            echo color("yellow","!] Silahkan input kembali\n");
-            goto otp;
-            }
-         }else{
-         echo color("red","-] Nomor sudah teregistrasi");
-         echo"\n==================================\n\n";
-         echo color("yellow","!] Silahkan registrasi kembali\n");
+         echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
+         echo "\nMau ulang? (y/n): ";
+         $pilih = trim(fgets(STDIN));
+         if($pilih == "y" || $pilih == "Y"){
+         echo "\n==============Register==============\n";
          goto ulang;
-         }
-//  }
-
-// echo change()."\n";
+         }else{
+         echo "\n==============Register==============\n";
+         goto ulang;
+  }
+ }
+}
+echo change()."\n"; ?>
