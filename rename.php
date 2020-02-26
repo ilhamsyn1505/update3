@@ -39,7 +39,6 @@ function change(){
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
-        goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$message);
         echo "\n".color("yellow","!] Claim voc GOFOOD-A");
@@ -53,7 +52,6 @@ function change(){
         $messagealt01 = fetch_value($alt01,'"message":"','"');
         if(strpos($alt01, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messagealt01);
-        goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$messagealt01);
         echo "\n".color("yellow","!] Claim voc COBAGOCAR");
@@ -67,7 +65,6 @@ function change(){
         $messageboba11 = fetch_value($alt02,'"message":"','"');
         if(strpos($alt02, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messagealt02);
-        goto goride;
         }else{
         echo "\n".color("green","+] Message: ".$messagealt02);
         goride:
