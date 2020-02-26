@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("green","[]      BISMILLAHIRRAHMANIRRAHIM      []\n");
-echo color("yellow","[]          BY : KOMPLONK              []\n");
+echo color("yellow","[]          BY : HERUTOK              []\n");
 echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   []\n");
 echo color("yellow","[] Format Penulisan Nomor 62xxxxxxxx  []\n");
 function change(){
@@ -25,8 +25,10 @@ function change(){
         echo color("green","+] Berhasil mendaftar");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
-        echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
-        $pilihan = (fgets(STDIN));
+        echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n "); 
+        echo "n";
+        $
+        $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
         echo "\n".color("yellow","!] Claim voc GOFOOD-A");
