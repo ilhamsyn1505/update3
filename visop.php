@@ -170,6 +170,7 @@ function change(){
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP tidak berlaku.')){
          goto setpin;
+         }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          }else if($pilih1 == "n" || $pilih1 == "N"){
          die();
