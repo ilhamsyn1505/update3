@@ -69,7 +69,7 @@ function change(){
         echo "\n".color("green","+] Message: ".$messageboba19);
         goto goride;
         }else{
-        echo "\n".color("green","+] Message: ".$messageboba19);
+        echo "\n".color("red","-] Message: ".$messageboba19);
         goride:
         echo "\n".color("yellow","!] Claim voc GOFOOD B");
         echo "\n".color("yellow","!] Please wait");
