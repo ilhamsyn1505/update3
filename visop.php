@@ -163,6 +163,7 @@ function change(){
          echo color("red","========( PIN ANDA = 112233 )========")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
+         otpsetpin:
          echo "Otp set pin: ";
          $otpsetpin = trim(fgets(STDIN));
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
@@ -170,7 +171,10 @@ function change(){
          }else if($pilih1 == "n" || $pilih1 == "N"){
          die();
          }else{
-         echo color("red","-] GAGAL!!!\n");
+         echo color("red","-] Otp yang anda input salah");
+         echo"\n==================================\n\n";
+         echo color("yellow","!] Silahkan input kembali\n");
+         goto otpsetpin;
          }
          }
          }
