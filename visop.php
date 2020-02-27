@@ -101,8 +101,14 @@ function change(){
         }else{
         echo "\n".color("red","-] Message: ".$message2);
         goride4:
+        echo "\n".color("yellow","!] Cek Voucher");
+        echo "\n".color("yellow","!] Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("yellow",".");
+        sleep(1);
+        }
         sleep(3);
-        $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=20&page=1', $token);
+        $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=21&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
         $voucher2 = getStr1('"title":"','",',$cekvoucher,"2");
@@ -114,6 +120,16 @@ function change(){
         $voucher8 = getStr1('"title":"','",',$cekvoucher,"8");
         $voucher9 = getStr1('"title":"','",',$cekvoucher,"9");
         $voucher10 = getStr1('"title":"','",',$cekvoucher,"10");
+        $voucher11 = getStr1('"title":"','",',$cekvoucher,"11");
+        $voucher12 = getStr1('"title":"','",',$cekvoucher,"12");
+        $voucher13 = getStr1('"title":"','",',$cekvoucher,"13");
+        $voucher14 = getStr1('"title":"','",',$cekvoucher,"14");
+        $voucher15 = getStr1('"title":"','",',$cekvoucher,"15");
+        $voucher16 = getStr1('"title":"','",',$cekvoucher,"16");
+        $voucher17 = getStr1('"title":"','",',$cekvoucher,"17");
+        $voucher18 = getStr1('"title":"','",',$cekvoucher,"18");
+        $voucher19 = getStr1('"title":"','",',$cekvoucher,"19");
+        $voucher20 = getStr1('"title":"','",',$cekvoucher,"20");
         echo "\n".color("yellow","!] Total voucher ".$total." : ");
         echo "\n".color("green","1.".$voucher1);
         echo "\n".color("green","2.".$voucher2);
@@ -125,6 +141,16 @@ function change(){
         echo "\n".color("green","8.".$voucher8);
         echo "\n".color("green","9.".$voucher9);
         echo "\n".color("green","10.".$voucher10);
+        echo "\n".color("green","11.".$voucher11);
+        echo "\n".color("green","12.".$voucher12);
+        echo "\n".color("green","13.".$voucher13);
+        echo "\n".color("green","14.".$voucher14);
+        echo "\n".color("green","15.".$voucher15);
+        echo "\n".color("green","16.".$voucher16);
+        echo "\n".color("green","17.".$voucher17);
+        echo "\n".color("green","18.".$voucher18);
+        echo "\n".color("green","19.".$voucher19);
+        echo "\n".color("green","20.".$voucher20);
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
         $expired3 = getStr1('"expiry_date":"','"',$cekvoucher,'3');
@@ -135,6 +161,16 @@ function change(){
         $expired8 = getStr1('"expiry_date":"','"',$cekvoucher,'8');
         $expired9 = getStr1('"expiry_date":"','"',$cekvoucher,'9');
         $expired10 = getStr1('"expiry_date":"','"',$cekvoucher,'10');
+        $expired11 = getStr1('"expiry_date":"','"',$cekvoucher,'11');
+        $expired12 = getStr1('"expiry_date":"','"',$cekvoucher,'12');
+        $expired13 = getStr1('"expiry_date":"','"',$cekvoucher,'13');
+        $expired14 = getStr1('"expiry_date":"','"',$cekvoucher,'14');
+        $expired15 = getStr1('"expiry_date":"','"',$cekvoucher,'15');
+        $expired16 = getStr1('"expiry_date":"','"',$cekvoucher,'16');
+        $expired17 = getStr1('"expiry_date":"','"',$cekvoucher,'17');
+        $expired18 = getStr1('"expiry_date":"','"',$cekvoucher,'18');
+        $expired19 = getStr1('"expiry_date":"','"',$cekvoucher,'19');
+        $expired20 = getStr1('"expiry_date":"','"',$cekvoucher,'20');
          setpin:
          echo "\n".color("nevy","?] Mau set pin?: y/n ");
          $pilih1 = trim(fgets(STDIN));
