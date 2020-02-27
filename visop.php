@@ -82,10 +82,10 @@ function change(){
         $message1 = fetch_value($goride,'"message":"','"');
         if(strpos($goride, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$message1);
-        goto goride3;
+        goto gofood;
         }else{
         echo "\n".color("red","-] Message: ".$message1);
-        goride3:
+        gofood:
         echo "\n".color("yellow","!] Claim voc XXI");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
@@ -96,8 +96,8 @@ function change(){
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOPAYDIXXI5"}');
         $message2 = fetch_value($goride1,'"message":"','"');
         if(strpos($goride1, 'Promo kamu sudah bisa dipakai.')){
-        echo "\n".color("green","+] Message: ".$message2);}
-        {
+        echo "\n".color("green","+] Message: ".$message2);
+        }else{
         echo "\n".color("red","-] Message: ".$message2);
         sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=21&page=1', $token);
