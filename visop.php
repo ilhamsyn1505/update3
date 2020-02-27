@@ -172,7 +172,7 @@ function change(){
          goto setpin;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
-         }else if($pilih1 == "n" || $pilih1 == "N"){
+         if($pilih1 == "n" || $pilih1 == "N"){
          die();
          }else{
          echo color("red","-] GAGAL!!!\n");
