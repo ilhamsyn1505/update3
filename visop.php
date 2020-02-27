@@ -167,12 +167,15 @@ function change(){
          $otpsetpin = trim(fgets(STDIN));
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          echo $verifotpsetpin;
-         if(strpos({"success":false,"data":null,"errors":[{"code":"GoPay-1604","message_title":"OTP tidak berlaku","message":"OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.","message_severity":"error"}]})){
+         $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
+         if(strpos($verifotpsetpin, 'OTP tidak berlaku.')){
          goto setpin;
+         echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          }else if($pilih1 == "n" || $pilih1 == "N"){
          die();
          }else{
          echo color("red","-] GAGAL!!!\n");
+         }
          }
          }
          }
