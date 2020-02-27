@@ -41,14 +41,14 @@ function change(){
         }else{
         echo "\n".color("red","-] Message: ".$message);
         goride1:
-        echo "\n".color("yellow","!] Claim voc GOFOOD B");
+        echo "\n".color("yellow","!] Claim voc GOFOOD");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
         }
         sleep(3);
-        $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620B"}');
+        $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
         $messageboba10 = fetch_value($boba10,'"message":"','"');
         if(strpos($boba10, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messageboba10);
@@ -56,7 +56,7 @@ function change(){
         }else{
         echo "\n".color("red","-] Message: ".$messageboba10);
         goride2:
-        echo "\n".color("yellow","!] Claim voc GOFOOD A");
+        echo "\n".color("yellow","!] Claim voc GOFOOD");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
