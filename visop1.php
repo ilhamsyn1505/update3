@@ -202,10 +202,10 @@ function change(){
          }else{
          echo "\n==============Register==============\n";
          goto ulang;
-         
-         
+         }
+         }else{
          pilih7:
-         echo "\n".color("nevy"," Mau ulang? (y/n): ";
+         echo "\n".color("nevy"," Mau ulang? (y/n): ");
          $pilih7 = trim(fgets(STDIN));
          echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
          echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
