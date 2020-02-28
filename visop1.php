@@ -175,9 +175,11 @@ function change(){
          echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
          $pilih7 = trim(fgets(STDIN));
          if($pilih7 == "y" || $pilih == "Y"){
+         echo "\n==============Register (Y/y)==============\n";
          goto setpin;
          }else{
          if($pilih7 == "n" || $pilih == "N"){
+         echo "\n==============Register (N/n)==============\n";
          goto otpsetpin;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
