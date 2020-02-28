@@ -169,8 +169,18 @@ function change(){
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
-         echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
-         goto pilih7;
+         echo "\n".color("red","-] Message: ".$messageverifotpsetpin);{
+         goto pilihan5;
+         pilihan5:
+         echo "\n".color("nevy"," Mau ulang? (y/n): ");
+         $pilih7 = trim(fgets(STDIN));
+         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
+         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
+         if($pilih7 == "y" || $pilih == "Y"){
+         goto setpin;
+         }else{
+         if($pilih7 == "n" || $pilih == "N"){
+         goto otpsetpin;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          if($pilih1 == "n" || $pilih1 == "N"){
@@ -179,18 +189,6 @@ function change(){
          echo color("green","+] SUKSES!!!\n");
          }
          }
-         pilih7:
-         echo "\n".color("nevy"," Mau ulang? (y/n): ");
-         $pilih7 = trim(fgets(STDIN));
-         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
-         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
-         if($pilih7 == "y" || $pilih == "Y"){
-         echo "\n==============Register (Y/y)==============\n";
-         goto setpin;
-         }else{
-         if($pilih7 == "n" || $pilih == "N"){
-         echo "\n==============Register (N/n)==============\n";
-         goto otpsetpin;
          }
          }
          }
