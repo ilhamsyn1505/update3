@@ -202,8 +202,8 @@ function change(){
          }else{
          echo "\n==============Register==============\n";
          goto ulang;
-         }
-         }else{
+         
+         
          pilih7:
          echo "\n".color("nevy"," Mau ulang? (y/n): ");
          $pilih7 = trim(fgets(STDIN));
