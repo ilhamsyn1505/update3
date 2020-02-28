@@ -52,10 +52,9 @@ function change(){
         $messageboba10 = fetch_value($boba10,'"message":"','"');
         if(strpos($boba10, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messageboba10);
-        goto goride2;
+        goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$messageboba10);
-        goride2:
         echo "\n".color("yellow","!] Claim voc GOFOOD");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
