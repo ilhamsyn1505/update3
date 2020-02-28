@@ -170,17 +170,7 @@ function change(){
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
          echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
-         echo "\n".color("nevy"," Mau ulang? (y/n): ";
-         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
-         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
-         $pilih7 = trim(fgets(STDIN));
-         if($pilih7 == "y" || $pilih == "Y"){
-         echo "\n==============Register (Y/y)==============\n";
-         goto setpin;
-         }else{
-         if($pilih7 == "n" || $pilih == "N"){
-         echo "\n==============Register (N/n)==============\n";
-         goto otpsetpin;
+         goto pilih7;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          if($pilih1 == "n" || $pilih1 == "N"){
@@ -212,6 +202,20 @@ function change(){
          }else{
          echo "\n==============Register==============\n";
          goto ulang;
+         
+         
+         pilih7:
+         echo "\n".color("nevy"," Mau ulang? (y/n): ";
+         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
+         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
+         $pilih7 = trim(fgets(STDIN));
+         if($pilih7 == "y" || $pilih == "Y"){
+         echo "\n==============Register (Y/y)==============\n";
+         goto setpin;
+         }else{
+         if($pilih7 == "n" || $pilih == "N"){
+         echo "\n==============Register (N/n)==============\n";
+         goto otpsetpin;
   }
  }
 }
