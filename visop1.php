@@ -175,16 +175,6 @@ function change(){
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          if($pilih1 == "n" || $pilih1 == "N"){
          die();
-         pilih7:
-         echo "\n".color("nevy"," Mau ulang? (y/n): ");
-         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
-         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
-         $pilih7 = trim(fgets(STDIN));
-         if($pilih7 == "y" || $pilih == "Y"){
-         goto setpin;
-         }else{
-         if($pilih7 == "n" || $pilih == "N"){
-         goto otpsetpin;
          }else{
          echo color("green","+] SUKSES!!!\n");
          }
@@ -211,10 +201,19 @@ function change(){
          goto ulang;
          }else{
          echo "\n==============Register==============\n";
-         goto ulang;
-         
-         
-         
+         goto ulang;      
+         }
+         } 
+         pilih7:
+         echo "\n".color("nevy"," Mau ulang? (y/n): ");
+         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
+         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
+         $pilih7 = trim(fgets(STDIN));
+         if($pilih7 == "y" || $pilih == "Y"){
+         goto setpin;
+         }else{
+         if($pilih7 == "n" || $pilih == "N"){
+         goto otpsetpin;
   }
  }
 }
