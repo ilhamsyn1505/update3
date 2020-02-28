@@ -170,8 +170,7 @@ function change(){
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
          echo "\n".color("red","-] Message: ".$messageverifotpsetpin);{
-         goto pilihan5;
-         pilihan5:
+         goto ;
          echo "\n".color("nevy"," Mau ulang? (y/n): ");
          $pilih7 = trim(fgets(STDIN));
          echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
