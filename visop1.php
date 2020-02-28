@@ -169,15 +169,17 @@ function change(){
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
-         echo "\n".color("red","-] Message: ".$messageverifotpsetpin);{
-         
-         
+         echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
+         goto pilih7;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          if($pilih1 == "n" || $pilih1 == "N"){
          die();
+         pilih7:
          echo "\n".color("nevy"," Mau ulang? (y/n): ");
-         }else{
+         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
+         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
+         $pilih7 = trim(fgets(STDIN));
          if($pilih7 == "y" || $pilih == "Y"){
          goto setpin;
          }else{
