@@ -206,9 +206,9 @@ function change(){
          
          pilih7:
          echo "\n".color("nevy"," Mau ulang? (y/n): ";
+         $pilih7 = trim(fgets(STDIN));
          echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
          echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
-         $pilih7 = trim(fgets(STDIN));
          if($pilih7 == "y" || $pilih == "Y"){
          echo "\n==============Register (Y/y)==============\n";
          goto setpin;
