@@ -157,7 +157,7 @@ function change(){
          }
          }else{
          echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
-         echo "\n".color("nevy","============== Ulangi ==============");
+         echo "\n".color("nevy","============== Ulangi ==============")."\n";
          $pilih = '{"ulangi":"y"}';
          if($pilih == "y" || $pilih == "Y"){
          goto ulang;
