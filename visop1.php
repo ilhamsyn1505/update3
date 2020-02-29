@@ -119,9 +119,11 @@ function change(){
         echo "\n".color("green","11.".$voucher11);
         echo "\n".color("green","12.".$voucher12);
          setpin:
-         echo "\n".color("yellow","========( PIN ANDA = 112233 )========");
-         $komplonk = "========( PIN ANDA = 112233 )========";
-         if(strpos($komplonk == "========( PIN ANDA = 112233 )========")){
+         echo "\n".color("nevy","!] ========( SET PIN )========");
+         $pilih1 = '{"set":"y"}';
+         if($pilih1 == "y" || $pilih1 == "Y"){
+         //if($pilih1 == "y" && strpos($no, "628")){
+         echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          otpsetpin:
@@ -133,7 +135,20 @@ function change(){
          echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
          goto pilih7;
          }else{
-         echo "\n".color("green","+] Message: SUKSES!!!".$messageverifotpsetpin);
+         echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
+         if($pilih1 == "n" || $pilih1 == "N"){
+         die();
+         }else{
+         echo color("green","+] SUKSES!!!\n");
+         }
+         }
+         }
+         }
+         }
+         }
+         }else{
+         goto setpin;
+         }
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
