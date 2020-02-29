@@ -131,8 +131,7 @@ function change(){
          echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
          goto pilih7;
          }else{
-         echo "\n".color("green","+] Message: ".$messageverifotpsetpin){
-         die();
+         echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          }else{
          echo color("green","+] SUKSES!!!\n");
          }
