@@ -200,6 +200,4 @@ echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   []\n");
   }
  }
 }
-//  }
-
-// echo change()."\n";
+echo change()."\n"; ?>
