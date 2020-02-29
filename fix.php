@@ -32,7 +32,7 @@ echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   []\n");
             $hp = '1'.substr(trim($nohp),0,13);
         }
     }
-        $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
+        $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
@@ -43,9 +43,11 @@ echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   []\n");
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("green","+] Berhasil mendaftar");
+        echo color("green","+] Berhasil mendaftar\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
+        echo color("green","+] Your access token : ".$token."\n\n");
+        save("token.txt",$token);
         echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
@@ -200,4 +202,6 @@ echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   []\n");
   }
  }
 }
-echo change()."\n"; ?>
+//  }
+
+// echo change()."\n";
