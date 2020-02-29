@@ -160,7 +160,6 @@ function change(){
          echo "\n".color("nevy","============== Ulangi ==============");
          $pilih = '{"ulangi":"y"}';
          if($pilih == "y" || $pilih == "Y"){
-         echo "\n==============Register==============\n";
          goto ulang;
          }else{
          echo "\n==============Register==============\n";
