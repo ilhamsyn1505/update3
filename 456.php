@@ -135,7 +135,7 @@ function change(){
          if($pilih1 == "n" || $pilih1 == "N"){
          die();
          }else{
-         echo color("green","+] SUKSES!!!\n"){
+         echo color("green","+] SUKSES!!!\n");
          }
          }else{
          echo color("red","-] Otp yang anda input salah");
