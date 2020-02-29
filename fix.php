@@ -4,8 +4,7 @@ include "function.php";
 echo color("green","[]      BISMILLAHIRRAHMANIRRAHIM      []\n");
 echo color("yellow","[]          BY : KOMPLONK             []\n");
 echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   []\n");
-
-// function change(){
+function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
@@ -202,6 +201,4 @@ echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   []\n");
   }
  }
 }
-//  }
-
-// echo change()."\n";
+echo change()."\n"; ?>
