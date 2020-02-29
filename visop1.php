@@ -131,7 +131,7 @@ function change(){
          echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
          goto pilih7;
          }else{
-         echo "\n".color("green","+] Message: "SUKSES!!!.$messageverifotpsetpin);
+         echo "\n".color("green","+] Message: SUKSES!!!".$messageverifotpsetpin);
          }
          }else{
          echo color("red","-] Otp yang anda input salah");
