@@ -91,7 +91,7 @@ function change(){
         $message2 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
         sleep(3);
-        $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=21&page=1', $token);
+        $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=15&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
         $voucher2 = getStr1('"title":"','",',$cekvoucher,"2");
@@ -105,14 +105,6 @@ function change(){
         $voucher10 = getStr1('"title":"','",',$cekvoucher,"10");
         $voucher11 = getStr1('"title":"','",',$cekvoucher,"11");
         $voucher12 = getStr1('"title":"','",',$cekvoucher,"12");
-        $voucher13 = getStr1('"title":"','",',$cekvoucher,"13");
-        $voucher14 = getStr1('"title":"','",',$cekvoucher,"14");
-        $voucher15 = getStr1('"title":"','",',$cekvoucher,"15");
-        $voucher16 = getStr1('"title":"','",',$cekvoucher,"16");
-        $voucher17 = getStr1('"title":"','",',$cekvoucher,"17");
-        $voucher18 = getStr1('"title":"','",',$cekvoucher,"18");
-        $voucher19 = getStr1('"title":"','",',$cekvoucher,"19");
-        $voucher20 = getStr1('"title":"','",',$cekvoucher,"20");
         echo "\n".color("yellow","!] Total voucher ".$total." : ");
         echo "\n".color("green","1.".$voucher1);
         echo "\n".color("green","2.".$voucher2);
@@ -126,42 +118,9 @@ function change(){
         echo "\n".color("green","10.".$voucher10);
         echo "\n".color("green","11.".$voucher11);
         echo "\n".color("green","12.".$voucher12);
-        echo "\n".color("green","13.".$voucher13);
-        echo "\n".color("green","14.".$voucher14);
-        echo "\n".color("green","15.".$voucher15);
-        echo "\n".color("green","16.".$voucher16);
-        echo "\n".color("green","17.".$voucher17);
-        echo "\n".color("green","18.".$voucher18);
-        echo "\n".color("green","19.".$voucher19);
-        echo "\n".color("green","20.".$voucher20);
-        $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
-        $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
-        $expired3 = getStr1('"expiry_date":"','"',$cekvoucher,'3');
-        $expired4 = getStr1('"expiry_date":"','"',$cekvoucher,'4');
-        $expired5 = getStr1('"expiry_date":"','"',$cekvoucher,'5');
-        $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
-        $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
-        $expired8 = getStr1('"expiry_date":"','"',$cekvoucher,'8');
-        $expired9 = getStr1('"expiry_date":"','"',$cekvoucher,'9');
-        $expired10 = getStr1('"expiry_date":"','"',$cekvoucher,'10');
-        $expired11 = getStr1('"expiry_date":"','"',$cekvoucher,'11');
-        $expired12 = getStr1('"expiry_date":"','"',$cekvoucher,'12');
-        $expired13 = getStr1('"expiry_date":"','"',$cekvoucher,'13');
-        $expired14 = getStr1('"expiry_date":"','"',$cekvoucher,'14');
-        $expired15 = getStr1('"expiry_date":"','"',$cekvoucher,'15');
-        $expired16 = getStr1('"expiry_date":"','"',$cekvoucher,'16');
-        $expired17 = getStr1('"expiry_date":"','"',$cekvoucher,'17');
-        $expired18 = getStr1('"expiry_date":"','"',$cekvoucher,'18');
-        $expired19 = getStr1('"expiry_date":"','"',$cekvoucher,'19');
-        $expired20 = getStr1('"expiry_date":"','"',$cekvoucher,'20');
          setpin:
-         echo "\n".color("nevy","?] Mau set pin?: y/n ");
-         $pilih1 = trim(fgets(STDIN));
-         if($pilih1 == "y" || $pilih1 == "Y"){
-         //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("yellow","========( Ketik Pin Anda )========")."\n";
-         echo color("nevy","(•) Pin : ");
-         $data2 = trim(fgets(STDIN));
+         echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
+         $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          otpsetpin:
          echo "\n".color("nevy","?] Otp set pin: ");
@@ -173,8 +132,6 @@ function change(){
          goto pilih7;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
-         if($pilih1 == "n" || $pilih1 == "N"){
-         die();
          }else{
          echo color("green","+] SUKSES!!!\n");
          }
