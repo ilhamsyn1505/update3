@@ -136,6 +136,7 @@ function change(){
          die();
          }else{
          echo color("green","+] SUKSES!!!\n"){
+         }
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
