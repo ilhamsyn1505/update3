@@ -119,7 +119,7 @@ function change(){
         echo "\n".color("green","11.".$voucher11);
         echo "\n".color("green","12.".$voucher12);
          setpin:
-         echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
+         echo "\n".color("yellow","========( PIN ANDA = 112233 )========"){
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          otpsetpin:
@@ -132,7 +132,6 @@ function change(){
          goto pilih7;
          }else{
          echo "\n".color("green","+] Message: SUKSES!!!".$messageverifotpsetpin);
-         }
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
