@@ -162,7 +162,6 @@ function change(){
          if($pilih == "y" || $pilih == "Y"){
          goto ulang;
          }else{
-         echo "\n==============Register==============\n";
          goto ulang;      
          }
          } 
