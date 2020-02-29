@@ -137,6 +137,14 @@ function change(){
          }else{
          echo color("green","+] SUKSES!!!\n");
          }
+         }
+         }
+         }
+         }
+         }
+         }else{
+         goto setpin;
+         }
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
