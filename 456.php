@@ -1,5 +1,4 @@
 <?php
-atas:
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("green","[]      BISMILLAHIRRAHMANIRRAHIM      []\n");
@@ -137,7 +136,6 @@ function change(){
          die();
          }else{
          echo color("green","+] SUKSES!!!\n"){
-         goto atas;
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
