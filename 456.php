@@ -138,28 +138,7 @@ function change(){
          }else{
          echo color("green","+] SUKSES!!!\n"){
          goto atas;
-         }
-         }
-         pilih7:
-         echo "\n".color("nevy"," Mau ulang? (y/n): ");
-         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
-         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
-         $pilih7 = trim(fgets(STDIN));
-         if($pilih7 == "y" || $pilih == "Y"){
-         goto setpin;
          }else{
-         if($pilih7 == "n" || $pilih == "N"){
-         goto otpsetpin;
-         }
-         }
-         }
-         }
-         }
-         }
-         }
-         }
-         }
-         }
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan input kembali\n");
@@ -175,6 +154,18 @@ function change(){
          }else{
          echo "\n==============Register==============\n";
          goto ulang;   
+         }
+         }
+         pilih7:
+         echo "\n".color("nevy"," Mau ulang? (y/n): ");
+         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
+         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
+         $pilih7 = trim(fgets(STDIN));
+         if($pilih7 == "y" || $pilih == "Y"){
+         goto setpin;
+         }else{
+         if($pilih7 == "n" || $pilih == "N"){
+         goto otpsetpin;
   }
  }
 }
