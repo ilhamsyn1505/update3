@@ -156,15 +156,6 @@ function change(){
          goto setpin;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
-         }
-         echo color("green","+] SUKSES!!!\n");
-         }
-         }
-         }
-         }
-         }
-         }
-         }else{
          goto setpin;
          }
          }else{
