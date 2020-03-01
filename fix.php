@@ -143,7 +143,8 @@ function change(){
         echo "\n".color("green","12.".$voucher12);
          setpin:
          echo "\n".color("nevy","!] ========( SET PIN )========");
-         $pilih1 = '{"set":"y"}';
+         $pilih1 = trim(fgets(STDIN));
+         $pilih2 = '{"set":"y"}';
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
