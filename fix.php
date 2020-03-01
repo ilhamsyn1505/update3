@@ -167,7 +167,7 @@ function change(){
          }
          if($pilih7 == "n" || $pilih == "N"){
          goto otpsetpin;
-         }
+         }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          if($pilih1 == "n" || $pilih1 == "N"){
          die();
