@@ -143,11 +143,7 @@ function change(){
         echo "\n".color("green","12.".$voucher12);
          setpin:
          echo "\n".color("nevy","!] ========( SET PIN )========");
-         $pilih1 = trim(fgets(STDIN));
-         $pilih2 = '{"set":"y"}';
-         if($pilih1 == "$pilih2"){
-         //if($pilih1 == "$pilih2" && strpos($no, "628")){
-         echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
+         echo "\n".color("yellow","========( PIN ANDA = 112233 )========");
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          otpsetpin:
@@ -187,8 +183,10 @@ function change(){
          goto ulang;
          }else{
          goto ulang;
-         }
-         }
+  }
+ }
+}
+echo change()."\n"; 
          pilih7:
          echo "\n".color("nevy"," Mau ulang? (y/n): ");
          echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
@@ -199,10 +197,4 @@ function change(){
          goto setpin;
          }else{
          if($pilih8 == "n" || $pilih8 == "N"){
-         goto otpsetpin;
-         }else{
-         goto ulang;
-  }
- }
-}
-echo change()."\n"; ?>
+         goto otpsetpin;?>
