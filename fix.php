@@ -145,8 +145,8 @@ function change(){
          echo "\n".color("nevy","!] ========( SET PIN )========");
          $pilih1 = trim(fgets(STDIN));
          $pilih2 = '{"set":"y"}';
-         if($pilih1 == "y" || $pilih1 == "Y"){
-         //if($pilih1 == "y" && strpos($no, "628")){
+         if($pilih1 == "$pilih2"){
+         //if($pilih1 == "$pilih2" && strpos($no, "628")){
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
@@ -157,7 +157,16 @@ function change(){
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
          echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
-         goto pilih7;
+         pilih7:
+         echo "\n".color("nevy"," Mau ulang? (y/n): ");
+         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
+         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
+         $pilih7 = trim(fgets(STDIN));
+         if($pilih7 == "y" || $pilih == "Y"){
+         goto setpin;
+         }else{
+         if($pilih7 == "n" || $pilih == "N"){
+         goto otpsetpin;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          if($pilih1 == "n" || $pilih1 == "N"){
@@ -186,19 +195,7 @@ function change(){
          if($pilih == "y" || $pilih == "Y"){
          goto ulang;
          }else{
-         goto ulang;      
-         }
-         } 
-         pilih7:
-         echo "\n".color("nevy"," Mau ulang? (y/n): ");
-         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
-         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
-         $pilih7 = trim(fgets(STDIN));
-         if($pilih7 == "y" || $pilih == "Y"){
-         goto setpin;
-         }else{
-         if($pilih7 == "n" || $pilih == "N"){
-         goto otpsetpin;
+         goto ulang;        
   }
  }
 }
