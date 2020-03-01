@@ -174,20 +174,6 @@ function change(){
          goto setpin;
          }
          }else{
-         pilih7:
-         echo "\n".color("nevy"," Mau ulang? (y/n): ");
-         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
-         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
-         echo "\n".color("nevy"," Ketik (y/n): ");
-         $pilih8 = trim(fgets(STDIN));
-         if($pilih8 == "y" || $pilih8 == "Y"){
-         goto setpin;
-         }
-         }else{
-         if($pilih8 == "n" || $pilih8 == "N"){
-         goto otpsetpin;
-         }
-         }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan input kembali\n");
@@ -200,7 +186,20 @@ function change(){
          if($pilih == "y" || $pilih == "Y"){
          goto ulang;
          }else{
-         goto ulang;        
+         goto ulang;      
+         }
+         }else{
+         pilih7:
+         echo "\n".color("nevy"," Mau ulang? (y/n): ");
+         echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
+         echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
+         echo "\n".color("nevy"," Ketik (y/n): ");
+         $pilih8 = trim(fgets(STDIN));
+         if($pilih8 == "y" || $pilih8 == "Y"){
+         goto setpin;
+         }else{
+         if($pilih8 == "y" || $pilih8 == "N"){
+         goto otpsetpin;
   }
  }
 }
