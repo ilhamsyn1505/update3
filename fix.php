@@ -143,6 +143,7 @@ function change(){
         echo "\n".color("green","12.".$voucher12);
          setpin:
          echo "\n".color("nevy","!] ========( SET PIN )========");
+         //if(strpos($no, "628")){    
          echo "\n".color("yellow","========( PIN ANDA = 112233 )========");
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
