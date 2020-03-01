@@ -157,6 +157,7 @@ function change(){
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
          echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
+         }
          echo "\n".color("nevy"," Mau ulang? (y/n): ");
          echo "\n".color("yellow","!] (Y/y): Kirim Ulang SMS Otp");
          echo "\n".color("yellow","!] (N/n): Jika Salah Ketik Otp");
@@ -164,7 +165,7 @@ function change(){
          $pilih7 = trim(fgets(STDIN));
          if($pilih7 == "y" || $pilih == "Y"){
          goto setpin;
-         }
+         }else{
          if($pilih7 == "n" || $pilih == "N"){
          goto otpsetpin;
          }else{
