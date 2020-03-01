@@ -144,7 +144,7 @@ function change(){
          setpin:
          echo "\n".color("nevy","?] Mau set pin?: y/n ");
          $ok = y
-         echo "\n".$ok."\n"
+         echo "\n".$ok."\n";
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
