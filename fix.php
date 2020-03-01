@@ -178,7 +178,6 @@ function change(){
          echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan input kembali\n");
          goto otp;
-         }
          }else{
          echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
          echo "\n".color("nevy","============== Ulangi ==============")."\n";
@@ -187,7 +186,6 @@ function change(){
          goto ulang;
          }else{
          goto ulang;
-         }
          }
          pilih7:
          echo "\n".color("nevy"," Mau ulang? (y/n): ");
@@ -199,16 +197,9 @@ function change(){
          goto setpin;
          }else{
          if($pilih8 == "n" || $pilih8 == "N"){
-         goto otpsetpin; 
-         }
-         }
-         }
-         }
-         }
-         }
+         goto otpsetpin;
          }else{
-         goto setpin;
-         }
+         goto ulang;
   }
  }
 }
