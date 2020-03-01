@@ -142,8 +142,12 @@ function change(){
         echo "\n".color("green","11.".$voucher11);
         echo "\n".color("green","12.".$voucher12);
          setpin:
-         echo "\n".color("nevy","!] ========( SET PIN )========");
-         echo "\n".color("yellow","========( PIN ANDA = 112233 )========");
+         echo "\n".color("nevy","?] Mau set pin?: y/n ");
+         $ok = y
+         $pilih1 = trim(fgets(STDIN));
+         if($pilih1 == "y" || $pilih1 == "Y"){
+         //if($pilih1 == "y" && strpos($no, "628")){
+         echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          otpsetpin:
@@ -153,11 +157,21 @@ function change(){
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
          echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
-         goto setpin;
+         goto otpsetpin;
          }else{
-         echo "\n".color("green","+] Message: +] Sukses!!!")."\n";         
+         echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
+         if($pilih1 == "n" || $pilih1 == "N"){
+         die();
+         }else{
+         echo color("green","+] SUKSES!!!\n");
          }
          }
+         }
+         }
+         }
+         }
+         }else{
+         goto setpin;
          }
          }else{
          echo color("red","-] Otp yang anda input salah");
@@ -167,7 +181,13 @@ function change(){
          }
          }else{
          echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
-         echo "\n".color("nevy","============== Ulangi ==============")."\n";
+         echo "\nMau ulang? (y/n): ";
+         $pilih = trim(fgets(STDIN));
+         if($pilih == "y" || $pilih == "Y"){
+         echo "\n==============Register==============\n";
+         goto ulang;
+         }else{
+         echo "\n==============Register==============\n";
          goto ulang;
   }
  }
