@@ -45,7 +45,7 @@ function change(){
         echo color("green","+] Berhasil mendaftar\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
-        echo color("green","+] Your access token : ".$token."\n\n");
+        echo color("green","+] Token : ".$token."\n");
         save("token.txt",$token);
         echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
         $pilihan = trim(fgets(STDIN));
@@ -142,11 +142,7 @@ function change(){
         echo "\n".color("green","11.".$voucher11);
         echo "\n".color("green","12.".$voucher12);
          setpin:
-         echo "\n".color("nevy","?] Mau set pin?: y/n ");
-         echo "y"."\n";
-         $pilih1 = fgets(STDIN);
-         if($pilih1 == "y" || $pilih1 == "Y"){
-         //if($pilih1 == "y" && strpos($no, "628")){
+         echo color("nevy","========( SET PIN )========")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
@@ -160,13 +156,8 @@ function change(){
          goto otpsetpin;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
-         if($pilih1 == "n" || $pilih1 == "N"){
-         die();
          }else{
          echo color("green","+] SUKSES!!!\n");
-         }
-         }
-         }
          }
          }
          }
