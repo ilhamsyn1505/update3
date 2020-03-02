@@ -166,9 +166,6 @@ function change(){
          echo color("yellow","!] Silahkan input kembali\n");
          goto otp;
          }
-         }
-         }
-         }
          }else{
          echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
          echo "\nMau ulang? (y/n): ";
