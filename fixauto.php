@@ -167,12 +167,7 @@ function change(){
          }
          }else{
          echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
-         echo "\nMau ulang? (y/n): ";
-         $pilih = trim(fgets(STDIN));
-         if($pilih == "y" || $pilih == "Y"){
-         echo "\n==============Register==============\n";
-         goto ulang;
-         }else{
+         echo "\nMasukkan Nomor Lain: ";
          echo "\n==============Register==============\n";
          goto ulang;
   }
