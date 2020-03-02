@@ -160,6 +160,7 @@ function change(){
          }else{
          goto setpin;
          }
+         }
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
