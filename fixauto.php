@@ -168,9 +168,11 @@ function change(){
          }else{
          echo color("red","-] NOMOR SUDAH TERDAFTAR/SALAH !!!");
          echo color("yellow","!] Silahkan input kembali");
+         echo "\nMau ulang? (y/n): ";
+         $pilih = trim(fgets(STDIN));
+         if($pilih == "y" || $pilih == "Y"){
          echo "\n==============Register==============\n";
          goto ulang;
-         }
          }else{
          goto ulang;
   }
