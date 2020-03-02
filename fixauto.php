@@ -170,7 +170,6 @@ function change(){
          echo "\nMasukkan Nomor Lain: ";
          echo "\n==============Register==============\n";
          goto ulang;
-  }
  }
 }
 echo change()."\n"; ?>
