@@ -156,7 +156,6 @@ function change(){
          goto setpin;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
-         }
          }else{
          goto setpin;
          }
