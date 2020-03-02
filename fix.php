@@ -47,10 +47,10 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("green","+] Token : ".$token."\n");
         save("token.txt",$token);
-        echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
+        echo color("nevy","?] Mau Redeem Voucher?: y/n ");
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
-        echo "\n".color("yellow","!] Claim voc GORIDE");
+        echo color("yellow","!] Claim voc GORIDE");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -140,14 +140,14 @@ function change(){
         echo "\n".color("green","9.".$voucher9);
         echo "\n".color("green","10.".$voucher10);
         echo "\n".color("green","11.".$voucher11);
-        echo "\n".color("green","12.".$voucher12);
+        echo "\n".color("green","12.".$voucher12)."\n";
          setpin:
-         echo color("nevy","========( SET PIN )========")."\n";
+         echo color("nevy","==============( SET PIN )==============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          otpsetpin:
-         echo "\n".color("nevy","?] Otp set pin: ");
+         echo color("nevy","?] Otp set pin: ");
          $otpsetpin = trim(fgets(STDIN));
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
