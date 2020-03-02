@@ -170,6 +170,9 @@ function change(){
          echo color("yellow","!] Silahkan input kembali");
          echo "\n==============Register==============\n";
          goto ulang;
+         }else{
+         goto ulang;
+  }
  }
 }
 echo change()."\n"; ?>
