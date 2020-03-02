@@ -167,7 +167,6 @@ function change(){
          }
          }else{
          echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
-         echo "\nMasukkan Nomor Lain: ";
          echo "\n==============Register==============\n";
          goto ulang;
  }
