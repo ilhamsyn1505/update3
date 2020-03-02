@@ -159,7 +159,6 @@ function change(){
          }
          }else{
          goto setpin;
-         }
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
@@ -176,6 +175,7 @@ function change(){
          }else{
          echo "\n==============Register==============\n";
          goto ulang;
+  }
  }
 }
 echo change()."\n"; ?>
