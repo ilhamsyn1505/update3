@@ -172,10 +172,6 @@ function change(){
          echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
          echo "\n==============Register==============\n";
          goto ulang;
-         }
-         }else{
-         echo "\n==============Register==============\n";
-         goto ulang;
   }
  }
 }
