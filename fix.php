@@ -159,6 +159,9 @@ function change(){
          }
          }
          }
+         }
+         }
+         }
          }else{
          goto setpin;
          }
@@ -179,6 +182,7 @@ function change(){
          }else{
          echo "\n==============Register==============\n";
          goto ulang;
+   }
   }
  }
 }
