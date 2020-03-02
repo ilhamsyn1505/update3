@@ -157,6 +157,14 @@ function change(){
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          }
+         }
+         }
+         }
+         }
+         }
+         }else{
+         goto setpin;
+         }
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
