@@ -47,7 +47,7 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("green","+] Token : ".$token."\n");
         save("token.txt",$token);
-        echo color("nevy","?] Mau Redeem Voucher?: y/n ");
+        echo color("nevy","?] Mau Redeem Voucher?, Ketik (y/n): ");
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("yellow","!] Claim voc GORIDE");
