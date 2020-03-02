@@ -156,9 +156,6 @@ function change(){
          goto otpsetpin;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
-         }else{
-         echo color("green","+] SUKSES!!!\n");
-         }
          }
          }
          }else{
