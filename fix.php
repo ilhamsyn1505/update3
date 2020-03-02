@@ -153,11 +153,11 @@ function change(){
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
          echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
-         goto otpsetpin;
+         goto setpin;
          }else{
          echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
          }
-         }else{
+         }
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan input kembali\n");
