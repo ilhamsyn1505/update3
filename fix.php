@@ -182,6 +182,7 @@ function change(){
          }else{
          echo "\n==============Register==============\n";
          goto ulang;
+     }
     }
    }
   }
