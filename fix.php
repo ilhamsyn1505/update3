@@ -152,10 +152,10 @@ function change(){
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
-         echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
+         echo color("red","-] Message: ".$messageverifotpsetpin);
          goto setpin;
          }else{
-         echo "\n".color("green","+] Message: +] SUKSES!!!");
+         echo color("green","+] Message: +] SUKSES!!!");
          }
          }
          }
