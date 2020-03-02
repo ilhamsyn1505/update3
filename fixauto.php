@@ -171,6 +171,7 @@ function change(){
          echo "\n==============Register==============\n";
          goto ulang;
          }else{
+         echo "_"
          goto ulang;
   }
  }
