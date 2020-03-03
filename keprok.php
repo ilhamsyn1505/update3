@@ -110,7 +110,7 @@ function change(){
          goto otp;
          }
          }else{
-         echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!\n");
+         echo color("red","Nomor Sudah Terdaftar/Salah !!!\n");
          echo color("nevy","==============Register==============\n");
          goto ulang;
  }
