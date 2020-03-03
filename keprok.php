@@ -57,9 +57,8 @@ function change(){
         $message1 = fetch_value($goride1,'"message":"','"');
         if(strpos($goride1, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$message1);
-        goto keprok;
-        }
-        sleep(3);
+        }else{
+        echo "\n".color("red","-] Message: ".$message1);
         keprok:
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=15&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
@@ -88,8 +87,6 @@ function change(){
         echo "\n".color("green","10.".$voucher10);
         echo "\n".color("green","11.".$voucher11);
         echo "\n".color("green","12.".$voucher12)."\n";
-        }else{
-        echo "\n".color("red","-] Message: ".$message1);
          setpin:
          echo color("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
