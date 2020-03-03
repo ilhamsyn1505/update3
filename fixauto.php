@@ -166,11 +166,8 @@ function change(){
          goto otp;
          }
          }else{
-         echo color("red","-] NOMOR SUDAH TERDAFTAR/SALAH !!!\n");
-         echo color("yellow","!] Silahkan input kembali");
-         echo "\nMau ulang? (y/n): ";
-         $pilih = trim(fgets(STDIN));
-         if($pilih == "y" || $pilih == "Y"){
+         echo color("red","-] NOMOR SUDAH TERDAFTAR/SALAH !!!");
+         echo "\n".color("yellow","!] Silahkan input kembali");
          echo "\n==============Register==============\n";
          goto ulang;
          }else{
