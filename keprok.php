@@ -57,6 +57,7 @@ function change(){
         $message1 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("nevy","+] Message: ".$message1);
         goto setpin;
+        }
         sleep(3)
          setpin:
          echo color("nevy","=============( SET PIN )=============")."\n";
