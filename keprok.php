@@ -30,7 +30,6 @@ function change(){
         else{
             $hp = '1'.substr(trim($nohp),0,13);
         }
-        }
         otp:
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
