@@ -30,6 +30,7 @@ function change(){
         else{
             $hp = '1'.substr(trim($nohp),0,13);
         }
+        }
         otp:
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
@@ -46,7 +47,6 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("green","+] Token : ".$token."\n");
         save("token.txt",$token);
-        }
         echo color("yellow","!] Claim voc GOFOOD");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
@@ -104,7 +104,6 @@ function change(){
          goto setpin;
          }else{
          echo color("green","+] Message: +] SUKSES!!!");
-         }
          }
          }else{
          echo color("red","-] Otp yang anda input salah\n");
