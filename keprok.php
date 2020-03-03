@@ -47,18 +47,18 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("green","+] Token : ".$token."\n");
         save("token.txt",$token);
-        sleep(1);
-        }
         echo "\n".color("yellow","!] Claim voc GOFOOD");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
         }
-        sleep(3);
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
-        $message2 = fetch_value($goride1,'"message":"','"');
+        $message1 = fetch_value($goride1,'"message":"','"');
+        if(strpos($goride1, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$message1);
+        goto setpin;
+        echo "\n".color("red","-] Message: ".$message1);
         sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=15&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
