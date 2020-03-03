@@ -89,7 +89,7 @@ function change(){
         echo "\n".color("green","4.".$voucher4);
         echo "\n".color("green","5.".$voucher5);
         echo "\n".color("green","6.".$voucher6);
-        echo "\n".color("green","7.".$voucher7);."\n";
+        echo "\n".color("green","7.".$voucher7);"\n";
          setpin:
          echo color("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
