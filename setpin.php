@@ -36,6 +36,7 @@ function change(){
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
         echo color("green","+] Kode verifikasi sudah di kirim")."\n";
+        }
         otp:
         echo color("nevy","?] Otp: ");
         $otp = trim(fgets(STDIN));
