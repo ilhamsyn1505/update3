@@ -60,7 +60,6 @@ function change(){
         goto setpin;
         }else{
         echo "\n".color("red","-] Message: ".$message1);
-        }
         sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=15&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
