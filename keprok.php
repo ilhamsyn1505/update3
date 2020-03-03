@@ -57,10 +57,8 @@ function change(){
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
-        goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$message);
-        goride:
         echo "\n".color("yellow","!] Claim voc GORIDE");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
@@ -106,8 +104,6 @@ function change(){
          echo color("green","+] Message: +] SUKSES!!!");
          goto setpin;
          }
-         }
-         }
          }else{
          echo color("red","-] Otp yang anda input salah\n");
          echo color("nevy","==============Register==============\n");;
@@ -117,7 +113,6 @@ function change(){
          echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
          echo color("nevy","==============Register==============\n");
          goto ulang;
-  }
  }
 }
 echo change()."\n"; ?>
