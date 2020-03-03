@@ -172,7 +172,6 @@ function change(){
          goto ulang;
          }else{
          goto ulang;
-  }
  }
 }
 echo change()."\n"; ?>
