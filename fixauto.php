@@ -29,6 +29,7 @@ function change(){
         }
         else{
             $hp = '1'.substr(trim($nohp),0,13);
+        }
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
@@ -168,8 +169,6 @@ function change(){
          echo color("red","-] NOMOR SUDAH TERDAFTAR/SALAH !!!");
          echo "\n".color("yellow","!] Silahkan input kembali");
          echo "\n==============Register==============\n";
-         goto ulang;
-         }else{
          goto ulang;
   }
  }
