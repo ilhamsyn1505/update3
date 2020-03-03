@@ -62,6 +62,7 @@ function change(){
          goto setpin;
          }else{
          echo color("green","+] Message: +] SUKSES!!!");
+         }
          }else{
          goto setpin;
          }
@@ -81,7 +82,6 @@ function change(){
          }else{
          echo "\n==============Register==============\n";
          goto ulang;
-  }
  }
 }
 echo change()."\n"; ?>
