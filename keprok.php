@@ -47,6 +47,8 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("green","+] Token : ".$token."\n");
         save("token.txt",$token);
+        sleep(1);
+        }
         echo "\n".color("yellow","!] Claim voc GOFOOD");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
