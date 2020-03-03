@@ -56,6 +56,7 @@ function change(){
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
         $message1 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("nevy","+] Message: ".$message1);
+        goto setpin;
         sleep(3)
          setpin:
          echo color("nevy","=============( SET PIN )=============")."\n";
@@ -70,7 +71,6 @@ function change(){
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
          echo color("red","-] Message: ".$messageverifotpsetpin)."\n";
          goto setpin;
-         }
          }else{
          echo color("green","+] Message: +] SUKSES!!!");
          }else{
