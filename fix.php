@@ -78,7 +78,7 @@ function change(){
         goto goride2;
         }else{
         echo "\n".color("red","-] Message: ".$messageboba10);
-        goto goride2:
+        goride2:
         echo "\n".color("yellow","!] Claim voc GOFOOD REFERRAL");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
