@@ -104,7 +104,6 @@ function change(){
          echo color("green","+] Message: +] SUKSES!!!");
          }
          }
-         }
          }else{
          echo color("red","-] Otp yang anda input salah\n");
          echo color("nevy","==============Register==============\n");;
