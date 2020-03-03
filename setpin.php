@@ -30,13 +30,12 @@ function change(){
         else{
             $hp = '1'.substr(trim($nohp),0,13);
         }
-     }
+     } 
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
         echo color("green","+] Kode verifikasi sudah di kirim")."\n";
-        }
         otp:
         echo color("nevy","?] Otp: ");
         $otp = trim(fgets(STDIN));
@@ -63,7 +62,6 @@ function change(){
          goto setpin;
          }else{
          echo color("green","+] Message: +] SUKSES!!!");
-         }
          }else{
          goto setpin;
          }
