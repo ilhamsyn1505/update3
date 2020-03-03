@@ -53,15 +53,14 @@ function change(){
         echo color("yellow",".");
         sleep(1);
         }
-        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
-        $message1 = fetch_value($goride1,'"message":"','"');
+        $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
+        $messageboba19 = fetch_value($boba19,'"message":"','"');
         if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
-        echo "\n".color("nevy","+] Message: ".$message1);
-        goto setpin;
+        echo "\n".color("nevy","+] Message: ".$messageboba19);
         }
         sleep(3)
          setpin:
-         echo color("nevy","=============( SET PIN )=============")."\n";
+         echo color"\n".("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
