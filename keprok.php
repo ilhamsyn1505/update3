@@ -58,6 +58,7 @@ function change(){
         if(strpos($goride1, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$message1);
         goto keprok;
+        }
         sleep(3);
         keprok:
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=15&page=1', $token);
