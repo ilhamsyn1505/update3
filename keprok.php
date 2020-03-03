@@ -104,6 +104,7 @@ function change(){
          echo color("green","+] Message: +] SUKSES!!!");
          }
          }
+         }
          echo "_";
          }else{
          }
