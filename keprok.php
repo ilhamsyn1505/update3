@@ -70,11 +70,16 @@ function change(){
         sleep(3);
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDE"}');
         $message1 = fetch_value($goride,'"message":"','"');
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message1);
+        goto setpin;
+        }else{
+        echo "\n".color("red","-] Message: ".$message1);
         sleep(3);
          setpin:
-         echo color("nevy","=============( SET PIN )=============")."\n";
+         echo "\n".color("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
+         echo color("green","+] Kode verifikasi sudah di kirim")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          otpsetpin:
