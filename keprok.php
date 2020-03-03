@@ -57,8 +57,10 @@ function change(){
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
+        goto keprok;
         }else{
         echo "\n".color("red","-] Message: ".$message);
+        keprok:
         echo "\n".color("yellow","!] Claim voc GORIDE");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
