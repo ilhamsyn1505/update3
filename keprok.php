@@ -57,6 +57,7 @@ function change(){
         $message1 = fetch_value($goride1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("nevy","+] Message: ".$message1);
+        }
         sleep(3)
          setpin:
          echo color("nevy","=============( SET PIN )=============")."\n";
