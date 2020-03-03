@@ -30,7 +30,6 @@ function change(){
         else{
             $hp = '1'.substr(trim($nohp),0,13);
         }
-    }
         otp:
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
@@ -103,7 +102,6 @@ function change(){
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
          echo color("red","-] Message: ".$messageverifotpsetpin)."\n";
          goto setpin;
-         }
          }else{
          echo color("green","+] Message: +] SUKSES!!!");
          }
