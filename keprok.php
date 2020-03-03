@@ -30,6 +30,7 @@ function change(){
         else{
             $hp = '1'.substr(trim($nohp),0,13);
         }
+    }
         otp:
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
@@ -87,7 +88,7 @@ function change(){
         echo "\n".color("green","4.".$voucher4);
         echo "\n".color("green","5.".$voucher5);
         echo "\n".color("green","6.".$voucher6);
-        echo "\n".color("green","7.".$voucher7);"\n";
+        echo "\n".color("green","7.".$voucher7)."\n";
          setpin:
          echo color("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
@@ -103,10 +104,11 @@ function change(){
          goto setpin;
          }else{
          echo color("green","+] Message: +] SUKSES!!!");
+         goto setpin;
          }
-         }else{
+         }
          echo color("red","-] Otp yang anda input salah\n");
-         echo color("nevy","==============Register==============\n");
+         echo color("nevy","==============Register==============\n");;
          goto otp;
          }
          }else{
