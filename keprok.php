@@ -57,7 +57,6 @@ function change(){
         $messageboba19 = fetch_value($boba19,'"message":"','"');
         if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("nevy","+] Message: ".$messageboba19);
-        }
         sleep(3)
          setpin:
          echo color"\n".("nevy","=============( SET PIN )=============")."\n";
