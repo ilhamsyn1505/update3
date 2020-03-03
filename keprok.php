@@ -78,7 +78,6 @@ function change(){
          echo color("green","+] Message: +] SUKSES!!!");
          }else{
          goto setpin;
-         }
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo"\n==================================\n\n";
