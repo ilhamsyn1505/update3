@@ -70,7 +70,7 @@ function change(){
         sleep(3);
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDE"}');
         $message1 = fetch_value($goride,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
+        if(strpos($massage1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message1);
         goto setpin;
         }else{
