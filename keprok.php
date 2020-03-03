@@ -105,9 +105,6 @@ function change(){
          }else{
          echo color("green","+] Message: +] SUKSES!!!");
          goto setpin;
-         }
-         }
-         }
          }else{
          echo color("red","-] Otp yang anda input salah\n");
          echo color("nevy","==============Register==============\n");;
