@@ -52,7 +52,6 @@ function change(){
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
-        }
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
         $message1 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("nevy","+] Message: ".$message1);
