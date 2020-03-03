@@ -55,10 +55,8 @@ function change(){
         }
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
         $message1 = fetch_value($goride1,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("nevy","+] Message: ".$message1);
         sleep(3)
-         }
          setpin:
          echo color("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
