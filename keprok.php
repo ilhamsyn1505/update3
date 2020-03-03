@@ -72,23 +72,6 @@ function change(){
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
         sleep(3);
-        $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=15&page=1', $token);
-        $total = fetch_value($cekvoucher,'"total_vouchers":',',');
-        $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
-        $voucher2 = getStr1('"title":"','",',$cekvoucher,"2");
-        $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
-        $voucher4 = getStr1('"title":"','",',$cekvoucher,"4");
-        $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
-        $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
-        $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
-        echo "\n".color("yellow","!] Total voucher ".$total." : ");
-        echo "\n".color("green","1.".$voucher1);
-        echo "\n".color("green","2.".$voucher2);
-        echo "\n".color("green","3.".$voucher3);
-        echo "\n".color("green","4.".$voucher4);
-        echo "\n".color("green","5.".$voucher5);
-        echo "\n".color("green","6.".$voucher6);
-        echo "\n".color("green","7.".$voucher7)."\n";
          setpin:
          echo color("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
