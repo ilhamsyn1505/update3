@@ -101,7 +101,6 @@ function change(){
          }else{
          echo color("green","+] Message: +] SUKSES!!!");
          }
-         }
          }else{
          goto setpin;
          }
