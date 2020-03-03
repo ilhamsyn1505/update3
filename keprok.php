@@ -106,6 +106,7 @@ function change(){
          }
          echo "_";
          }else{
+         }
          goto setpin;
          }
          }else{
