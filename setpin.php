@@ -64,7 +64,6 @@ function change(){
          }
          }
          }
-         }
          }else{
          goto setpin;
          }
