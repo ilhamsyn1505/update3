@@ -169,6 +169,8 @@ function change(){
          echo color("red","-] NOMOR SUDAH TERDAFTAR/SALAH !!!");
          echo "\n".color("yellow","!] Silahkan input kembali");
          echo "\n==============Register==============\n";
+         }
+         }else{
          goto ulang;
  }
 }
