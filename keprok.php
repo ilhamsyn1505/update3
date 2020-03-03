@@ -56,6 +56,7 @@ function change(){
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
         $message1 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("nevy","+] Message: ".$message1);
+        }else{
         sleep(3)
          setpin:
          echo color("nevy","=============( SET PIN )=============")."\n";
