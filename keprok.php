@@ -75,7 +75,6 @@ function change(){
         goto setpin;
         }else{
         echo "\n".color("red","-] Message: ".$message1);
-        sleep(3);
          setpin:
          echo "\n".color("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
