@@ -55,6 +55,7 @@ function change(){
         }
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
         $message1 = fetch_value($goride1,'"message":"','"');
+        if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("nevy","+] Message: ".$message1);
         goto setpin;
         }
@@ -74,7 +75,6 @@ function change(){
          goto setpin;
          }else{
          echo color("green","+] Message: +] SUKSES!!!");
-         }
          }else{
          goto setpin;
          }
