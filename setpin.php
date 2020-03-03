@@ -67,19 +67,19 @@ function change(){
          }
          }else{
          echo color("red","-] Otp yang anda input salah");
-         echo"\n==================================\n\n";
+         echo"\n==================================\n";
          echo color("yellow","!] Silahkan input kembali\n");
          goto otp;
          }
          }else{
-         echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
-         echo "\nMau ulang? (y/n): ";
+         echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!\n");
+         echo "\nMau ulang? (y/n) : ";
          $pilih = trim(fgets(STDIN));
          if($pilih == "y" || $pilih == "Y"){
-         echo "\n==============Register==============\n";
+         echo color("nevy","==============Register==============\n");
          goto ulang;
          }else{
-         echo "\n==============Register==============\n";
+         echo color("nevy","==============Register==============\n");
          goto ulang;
   }
  }
