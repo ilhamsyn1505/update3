@@ -56,10 +56,8 @@ function change(){
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
         $message1 = fetch_value($goride1,'"message":"','"');
         if(strpos($goride1, 'Promo kamu sudah bisa dipakai.')){
-        echo "\n".color("green","+] Message: ".$message1);
-        }else{
-        echo "\n".color("red","-] Message: ".$message1);
-        keprok:
+        echo "\n".color("nevy","+] Message: ".$message1);
+        sleep(3)
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=15&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
