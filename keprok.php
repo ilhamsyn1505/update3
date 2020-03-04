@@ -70,7 +70,7 @@ function change(){
         sleep(3);
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDE"}');
         $message1 = fetch_value($goride,'"message":"','"');
-        if(strpos($massage1, 'Promo kamu sudah bisa dipakai')){
+        if(strpos($goride, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message1);
         goto setpin;
         }else{
@@ -86,7 +86,7 @@ function change(){
          $otpsetpin = trim(fgets(STDIN));
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
-         if(strpos($verifotpsetpin, '','','OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
+         if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
          echo color("red","-] Message: ".$messageverifotpsetpin)."\n";
          goto setpin;
          }else{
