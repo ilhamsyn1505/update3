@@ -48,7 +48,7 @@ function change(){
         echo color("green","+] Token : ".$token."\n");
         save("token.txt",$token);
         setpin:
-         echo "\n".color("nevy","=============( SET PIN )=============")."\n";
+         echo color("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
          echo color("green","+] Kode verifikasi sudah di kirim")."\n";
          $data2 = '{"pin":"112233"}';
